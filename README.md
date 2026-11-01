@@ -1,5 +1,21 @@
 # qq-dsh-bili-plugin
 
+**Two Bilibili tools for DSH: search, and read a video.**
+
+`bili_search` finds videos by keyword. `bili_extract` turns one video into metadata,
+subtitle text, hot comments, danmaku and keyframes — so an agent can actually watch instead
+of guessing from a title.
+
+## In short
+
+- **You need:** Node 22+ and nothing else. No npm dependencies: network calls use `fetch`,
+  extraction reuses the `dsh-bilibili` extractor by absolute path.
+- **Try it:** `node --test` — 32 tests, the parsers are pure functions so they run offline.
+- **Good first read:** `lib/search.js` (response parsing + in-process throttling).
+
+---
+# qq-dsh-bili-plugin
+
 两个 B 站工具，装进 DSH 之后它就能自己搜视频、读字幕、看关键帧。
 
 | 工具 | 用途 |
