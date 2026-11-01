@@ -1,0 +1,6 @@
+# bili-plugin 的可见性探测入口（只用于验证，不属于正常 profile）：
+#   node <dsh>/lib/bin.js --profile qq --patch <this file>
+# 需要 QQ_NODE_TOKEN 未设置，否则会多起一个桥接轮询器。
+- insert:
+    - id: qq-bili-probe
+      name: qq-bili/scripts/probe-bili.js

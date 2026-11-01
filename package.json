@@ -1,0 +1,40 @@
+{
+  "name": "qq-bili",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "description": "B 站能力：bili_search 搜索工具（零 npm 依赖）",
+  "exports": {
+    ".": "./index.js",
+    "./index.js": "./index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./lib/*.js": "./lib/*.js",
+    "./scripts/*.js": "./scripts/*.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "lib/",
+    "scripts/"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "^3.18.5"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
